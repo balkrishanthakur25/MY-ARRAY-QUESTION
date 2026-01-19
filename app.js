@@ -1015,12 +1015,10 @@
 
 // (Array No 4)
 // Given an array and its size, print the array in reverse order.
-// L = {5, 4, 9, 2, 1, 0}
 
 // let arr = [];
 //  const prompt = require("prompt-sync")();
 // let n = Number(prompt("Enter array length"));
-
 
 // for (let i = 0; i < n; i++) {
 //      const prompt = require("prompt-sync")();
@@ -1072,32 +1070,30 @@
 
 // (Array No 6)
 // Write a program to create an array of 7 numbers from the user and print "Yes" if the array consists of consecutive numbers, otherwise print "No".
-// .....................................................................................................................
+// .............................................................................................................
+// const prompt = require("prompt-sync")();
 
-//  const prompt = require("prompt-sync")();
-
-// let n = prompt("Kitne numbers: ");
+// let n = Number(prompt("Enter the length number: "));
 // let arr = [];
 
 // for (let i = 0; i < n; i++) {
-//     arr[i] = Number(prompt("Number dalo: "));
+//     arr[i] = Number(prompt("Enter number: "));
 // }
- 
-// arr.sort((a, b) => a - b);
 
-// let flag = 1;
+// let aman = true;
 
-// for (let i = 1; i < n; i++) {
-//     if (arr[i] != arr[i - 1] + 1) {
-//         flag = 0;
+// for (let i = 0; i < n - 1; i++) {
+//     if (arr[i] + 1 !== arr[i + 1]) {
+//         ok = false;
 //         break;
 //     }
 // }
 
-// if (flag == 1)
+// if (aman) {
 //     console.log("Yes");
-// else
+// } else {
 //     console.log("No");
+// }
 
 // (Array No 7)
 // Make a flowchart to find the sum and average of elements in an array. Take elements as input from the user.
@@ -1127,31 +1123,26 @@
 // Write a program to count the total occurrences of a number in the array. Input the elements from the user.
 // .....................................................................................................................
 
- const prompt = require("prompt-sync")();
-let n = prompt("enter the length number: ");
-let arr = [];
+//  const prompt = require("prompt-sync")();
+// let n = prompt("enter the length number: ");
+// let arr = [];
 
-for (let i = 0; i < n; i++) {
-    arr[i] = Number(prompt("take Number: "));
-}
+// for (let i = 0; i < n; i++) {
+//     arr[i] = Number(prompt("take Number: "));
+// }
 
-let num = Number(prompt("Which number should I check? :"));
+// let num = Number(prompt("Which number should I check? :"));
 
-let count = 0;
+// let count = 0;
 
-for (let i = 0; i < n; i++) {
-    if (arr[i] === num) {
-        count++;
-    }
-}
-
-console.log(num, "number count is :", count);    
+// for (let i = 0; i < n; i++) {
+//     if (arr[i] === num) {
+//         count++;
+//     }
+// }
+// console.log(num, "number count is :", count);    
 
 /* =========================================================================*/
-
-
-
-
 // (Array No 9 )
 // Make a flowchart to count positive and negative elements in an array. Take elements as input from the user.
 // .....................................................................................................................
@@ -1181,27 +1172,32 @@ console.log(num, "number count is :", count);
 
 // (Array No 10 )
 // Make a flowchart to print duplicate elements in an array. Create the array based on the size given by the user.
-// .....................................................................................................................
+// // .....................................................................................................................
 
 // const prompt = require("prompt-sync")();
-// let n = prompt("enter the length number: ");
+
+// let n = Number(prompt("Enter length: "));
 // let arr = [];
 
 // for (let i = 0; i < n; i++) {
-//     arr[i] = Number(prompt("take Number: "));
+//     arr[i] = Number(prompt("Enter number: "));
 // }
 
-// let duplicates = [];
-
 // for (let i = 0; i < n; i++) {
+//     let count = 1;
+
 //     for (let j = i + 1; j < n; j++) {
-//         if (arr[i] === arr[j] && !duplicates.includes(arr[i])) {
-//             duplicates.push(arr[i]);
+//         if (arr[i] === arr[j]) {
+//             count++;
+//             arr[j] = -1;
 //         }
+//     }
+
+//     if (arr[i] !== -1) {
+//         console.log(arr[i] + " total " + count + " baar aaya");
 //     }
 // }
 
-// console.log("Duplicate elements are:", duplicates);
 
 // (Array No 11)
 // Create an array that stores the first n even numbers. Take n as input from the user.
@@ -1236,6 +1232,18 @@ console.log(num, "number count is :", count);
 // (Array No 13)
 // Create an array that stores all the factors of a number n. Take n as input from the user.
 // .....................................................................................................................
+
+// const prompt = require("prompt-sync")();
+// let n = Number(prompt("Enter a number: "));
+// let factors = [];
+
+// for(let i = 1; i <= n; i++){
+//     if( n % i === 0){
+//         factors.push(i);
+//     }
+// }
+// console.log("Factors of", n, "are:", factors);
+
 
 // (Array No 14)
 // Create an array that stores all the prime numbers up to n. Take n as input from the user.
@@ -1282,9 +1290,40 @@ console.log(num, "number count is :", count);
 // Create an array that stores all Armstrong numbers up to n. Take n as input from the user.
 // .....................................................................................................................
 
+// let n = 500;
+// let armstrongNumbers = [];
+
+// for (let i = 1; i <= n; i++) {
+//     let sum = 0;
+//     let temp = i;
+
+//     while (temp > 0) {
+//         let digit = temp % 10;
+//         sum += digit*digit*digit;
+//         temp = Math.floor(temp / 10);
+//     }
+
+//     if (sum === i) {
+//         armstrongNumbers.push(i);
+//     }
+// }
+// console.log("Armstrong numbers up to", n, "are:", armstrongNumbers);
+
 // (Array No  17)
 // Create an array that stores the factorial of the first n natural numbers. Take n as input from the user.
 // .....................................................................................................................
+
+// const prompt = require("prompt-sync")();
+// let n = Number(prompt("Enter the value of n: "));
+// let arr = [];
+// factorial = 2;
+
+// for (let i = 1; i <= n; i++) {
+//     factorial *= i;
+//     arr.push(factorial);
+// }
+
+// console.log("Factorials of first", n, "natural numbers are:", arr);
 
 // (Array No  18)
 // Write a program to create an array of 10 numbers from the user and count the number of odd and even numbers.
@@ -1419,6 +1458,35 @@ console.log(num, "number count is :", count);
 // (Array No27)
 // Convert a given Roman numeral into its decimal equivalent.
 // .....................................................................................................................
+// const prompt = require("prompt-sync")();
+// let romanNumeral = prompt("Enter a Roman numeral: ").toUpperCase();
+
+// let romanToDecimal = {
+//     "I": 1,
+//     "V": 5,
+//     "X": 10,
+//     "L": 50,
+//     "C": 100,
+//     "D": 500,
+//     "M": 1000
+// };
+
+// let decimalValue = 0;
+// let prevValue = 0;
+
+// for (let i = romanNumeral.length - 1; i >= 0; i--) {
+//     let currentValue = romanToDecimal[romanNumeral[i]];
+
+//     if (currentValue < prevValue) {
+//         decimalValue -= currentValue;
+//     } else {
+//         decimalValue += currentValue;
+//     }
+
+//     prevValue = currentValue;
+// }
+
+// console.log("Decimal Value:", decimalValue);
 
 
 
@@ -1459,7 +1527,7 @@ console.log(num, "number count is :", count);
 // .....................................................................................................................
 
 // let arr = [10, 20, 30, 40, 50];
-// let k = 2;
+// let k = 4;
 
 // let r = [];
 
@@ -1477,10 +1545,72 @@ console.log(num, "number count is :", count);
 // (Array No 32)
 // Take an array from the user as input and find duplicate elements in the array.
 // .....................................................................................................................
+// let arr = [1, 2, 3, 2, 4, 1];
+// let duplicate = [];
+
+// for (let i = 0; i < arr.length; i++) {
+
+//   let milGaya = false;   // maan lo nahi mila
+
+//   for (let j = 0; j < duplicate.length; j++) {
+//     if (arr[i] === duplicate[j]) {
+//       milGaya = true;   // mil gaya
+//       break;
+//     }
+//   }
+
+//   if (milGaya === false) {
+//     duplicate.push(arr[i]); // add karo
+//   }
+// }
+
+// console.log(duplicate);
+
 
 // (Array No 33)
 // Take two sorted arrays from the user and merge them into a single sorted array.
 // .....................................................................................................................
+
+// const prompt = require("prompt-sync")();
+// let n1 = Number(prompt("Enter length of first array: "));
+// let arr1 = [];
+
+// for (let i = 0; i < n1; i++) {
+//     arr1[i] = Number(prompt("Enter element for first array: "));
+// }
+
+// let n2 = Number(prompt("Enter length of second array: "));
+// let arr2 = [];
+
+// for (let i = 0; i < n2; i++) {
+//     arr2[i] = Number(prompt("Enter element for second array: "));
+// }
+
+// let mergedArray = [];
+// let i = 0;
+// let j = 0;
+
+// while (i < n1 && j < n2) {
+//     if (arr1[i] < arr2[j]) {
+//         mergedArray.push(arr1[i]);
+//         i++;
+//     } else {
+//         mergedArray.push(arr2[j]);
+//         j++;
+//     }
+// }
+
+// while (i < n1) {
+//     mergedArray.push(arr1[i]);
+//     i++;
+// }
+
+// while (j < n2) {
+//     mergedArray.push(arr2[j]);
+//     j++;
+// }
+
+// console.log("Merged Sorted Array:", mergedArray);
 
 // (Array No 34)
 // Given an unsorted array of non-negative integers, find a contiguous subarray whose sum equals a given number S.
@@ -1506,14 +1636,18 @@ console.log(num, "number count is :", count);
 // Bubble Sort
 // .....................................................................................................................
 
+
+
 // (Array No 39)
 // Given an array [10, 12, 34, 11, 4, 5, 1]. Print the last ‘i’ elements of the array. ‘i’ is taken from the user.
 // Example:
 // If i = 3 → (4, 5, 1)
 // If i = 5 → (34, 11, 4, 5, 1)arr.sort(function(a, b) {
-    
+//=======================================================================================================
+
 // let arr = [10, 12, 34, 11, 4, 5, 1];
 // const prompt = require("prompt-sync")();
+
 // let i = Number(prompt("Enter the number of elements to print from the end: "));
 
 // let result = [];
@@ -1526,8 +1660,103 @@ console.log(num, "number count is :", count);
 
 // (Array No 40)
 // Take an array as input from the user and sort it in ascending order using the in-built sort() function.
-// .....................................................................................................................
+// ........................................................................................................
 
+// const  prompt = require("prompt-sync")();
+// let n = Number(prompt("Enter the length: "));
+
+// let arr =[];
+
+// for(let i = 0; i < n ; i++){
+//      arr[i] = Number(prompt("Enter number: "))
+// }
+// arr.sort(( a, b ) => a - b );
+
+// console.log("storted arr",arr);
+
+
+// ==================== SORTED ARRAY  ======================
+// let arr = [10, 12, 34, 11, 4, 5, 1];
+// arr.sort((a, b) => a - b);
+// console.log(arr); 
+
+// let arr = [10, 12, 34, 11, 4, 5, 1];
+
+// for( let i = 0 ;i < arr.length - 1; i++ ){
+//     for(let j = 1 + i; j < arr.length; j++){
+//         if(arr[i] > arr[j]){
+//             let temp = arr[i];
+//             arr[i] = arr[j];
+//             arr[j] = temp;
+//         }
+//     }
+// }
+// console.log(arr);
+
+// ======================================================================================================
+// Move all zeros to the end of the array
+// ======================================================================================================
+
+// const prompt = require("prompt-sync")();
+// let n = Number(prompt("Enter the length number: "));
+// let arr = [];
+
+// for (let i = 0; i < n; i++) {
+//     arr[i] = Number(prompt("take Number: "));
+// }
+
+// let pos = 0;
+
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] !== 0) {
+//         arr[pos] = arr[i];
+//         pos++;
+//     }
+// }
+
+// for (let i = pos; i < arr.length; i++) {
+//     arr[i] = 0;
+// }
+
+// console.log(arr);
+
+
+
+
+// function rearrange(arr) {
+//     let n = arr.length;
+
+//     // Step 1: sort array
+//     arr.sort((a, b) => a - b);
+
+//     let maxIdx = n - 1;
+//     let minIdx = 0;
+//     let maxValue = arr[n - 1] + 1;
+
+//     // Step 2: store both old and new values
+//     for (let i = 0; i < n; i++) {
+//         if (i % 2 === 0) {
+//             // even index → max element
+//             arr[i] += (arr[maxIdx] % maxValue) * maxValue;
+//             maxIdx--;
+//         } else {
+//             // odd index → min element
+//             arr[i] += (arr[minIdx] % maxValue) * maxValue;
+//             minIdx++;
+//         }
+//     }
+
+//     // Step 3: get final values
+//     for (let i = 0; i < n; i++) {
+//         arr[i] = Math.floor(arr[i] / maxValue);
+//     }
+
+//     return arr;
+// }
+
+// // Example
+// let arr = [1, 2, 3, 4, 5, 6];
+// console.log(rearrange(arr));
 
 
 
@@ -1544,3 +1773,41 @@ console.log(num, "number count is :", count);
 // console.log("Sorted array in ascending order:", arr);
 
 // print sorted array in descending order (large to small)
+
+// let arr = [1,2,3,4,3,1,2,];
+// let uniqui = [ 0 ]*n;
+// let size = 0;
+// let n = 7;
+// for(let i = 0; i < n; i++){ 
+//     let duplicate = false;
+//     for(let j = 0; j < size; j++){
+//         if(arr[i]==uniqui[j]){
+//             duplicate = true;
+//             breck;
+//         }
+//     }
+//     if()
+// }
+
+
+
+// console.log([] - 0 );
+// console.log([] == [] );
+// console.log(0 === false );
+// console.log(typeof(NaN));
+// console.log([]+[]);
+// console.log(!! " " );
+// console.log(null == undefined);
+// console.log(typeof typeof 1);
+// console.log(false || "rahul");
+// console.log(!'');
+// console.log(!'hello');
+// console.log( 0 && "rahul");
+// console.log([] == ![] );
+// console.log("7"-7);
+// console.log([] == 1 );
+// console.log([] == ![] );
+// console.log(undefined + 9);
+// console.log(7 - "8") ;
+
+
