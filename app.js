@@ -1638,6 +1638,7 @@
 
 
 
+
 // (Array No 39)
 // Given an array [10, 12, 34, 11, 4, 5, 1]. Print the last ‘i’ elements of the array. ‘i’ is taken from the user.
 // Example:
@@ -1757,13 +1758,6 @@
 // // Example
 // let arr = [1, 2, 3, 4, 5, 6];
 // console.log(rearrange(arr));
-
-
-
-
-
-
-
 
 // print sorted array in ascending order (small to large)
 // let arr = [10, 12, 34, 11, 4, 5, 1];
